@@ -2,8 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    height: 90vh;
+    background-color: #ffffff;
+    margin-top: 30px; /* Adjust as needed */
+  margin-bottom: 30px; /* Adjust as needed */
   }
   
   .loginBox {
@@ -14,20 +16,39 @@
     overflow: hidden;
     max-width: 900px;
     width: 90%;
+    height: 600px;
+    margin-top: 50px; /* Adjust as needed */
+  margin-bottom: 50px; /* Adjust as needed */
   }
   
   .loginImage {
     width: 50%;
-    background: url("../../components/images/PAL.png") no-repeat center center;
+    background: url("../../components/images/login1.png") no-repeat center center;
     background-size: cover;
   }
-  
-  .loginForm {
+  .bgImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .rightSection {
     width: 50%;
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-image: url("../../components/images/login.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  }
+  .rightSection form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%; /* Adjust as needed */
   }
   
   h2 {
@@ -84,7 +105,7 @@
     display: block;
     text-align: right;
     margin-top: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #0056b3;
     text-decoration: none;
   
@@ -108,7 +129,20 @@
       background-color: #333;
     }
   }
-  
+  .loginBox {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 90%;
+    align-items: stretch;
+  }
+  .rightSection input,
+.rightSection button {
+  width: 100%;
+}
   .signupLink {
     text-align: center;
     margin-top: 1rem;

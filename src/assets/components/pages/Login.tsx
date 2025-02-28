@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../components/css/Login.module.scss";
-import logo from "../../components/images/PAL.png";
-import bgImage from "../../components/images/PAL.png";
+// import logo from "../../components/images/PAL.png";
+import bgImage from "../../components/images/login1.png";
 
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className={styles.loginContainer}>
       <div className={styles.loginBox}>
-        <div className={styles.leftSection}>
+        <div className={styles.loginImage}>
           <img src={bgImage} alt="Background" className={styles.bgImage} />
         </div>
         <div className={styles.rightSection}>
-          <h2>Welcome to</h2>
+          <h1>Welcome to</h1>
           <h1>PAL TrainingSystem</h1>
           <form>
             <label>Email Address</label>
@@ -35,7 +35,7 @@ const Login: React.FC = () => {
             </div>
             
             <Link to="/forgot-password" className={styles.forgotPassword}>
-              Forgot Password
+              Forgot Password?
             </Link>
             <button type="submit" className={styles.loginButton}>Login</button>
           </form>

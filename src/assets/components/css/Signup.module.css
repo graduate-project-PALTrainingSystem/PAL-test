@@ -1,0 +1,109 @@
+/* Base Styles */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .signup-sidebar {
+    width: 40%;
+    max-width: 700px;
+    background-image: url("../../components/images/signup.png"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem; /* Add padding to ensure content is within the image */
+  }
+  
+  .signup-logo {
+    margin-bottom: 2rem;
+  }
+  
+  .signup-form-container {
+    flex-grow: 1;
+    padding: 3rem; /* Increase padding for more space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signup-step {
+    max-width: 600px;
+    width: 100%;
+    margin: 30px auto; /* Increase margin for more space */
+    background-color: white;
+    padding: 30px; /* Increase padding for more space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Step 2 Styles */
+  .step2-form label {
+    display: block;
+    font-size: 1rem; /* Increase font size */
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem; /* Increase margin */
+  }
+  
+  .step2-form input,
+  .step2-form select {
+    margin-top: 0.25rem;
+    width: 100%;
+    padding: 0.75rem; /* Increase padding */
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .step2-form input:focus,
+  .step2-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  }
+  
+  .step2-form .password-container {
+    position: relative;
+  }
+  
+  .step2-form .password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 0.5rem; /* Adjust padding */
+  }
+  
+  .step2-form .terms-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem; /* Increase margin */
+  }
+  
+  .step2-form .terms-container label {
+    margin-left: 0.5rem;
+  }
+  
+  .step2-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #10b981;
+    color: white;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin-top: 2rem; /* Increase margin */
+  }
+  
+  /* Common Styles */
+  h2 {
+    font-size: 1.75rem; /* Increase heading size */
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem; /* Increase margin */
+  }

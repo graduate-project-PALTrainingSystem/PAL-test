@@ -1,20 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./assets/components/Navbar/Navbar"; // Correct import path for Navbar
-import MainPage from "./assets/components/pages/mainpage"; // Import MainPage component
-import Footer from "./assets/components/Navbar/Footer"; // Your Footer component
-import Login from "./assets/components/pages/Login"; 
+import Navbar from "./assets/components/Navbar/Navbar";
+import MainPage from "./assets/components/pages/mainpage"; 
+import Footer from "./assets/components/Navbar/Footer";
+import Login from "./assets/components/pages/Login";
+import Contact from "./assets/components/pages/Contact";
+import Signup from "./assets/components/pages/Signup"; 
 
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Add Navbar component here */}
+      <Navbar />
       <Routes>
-        {/* Define the route to your custom main page */}
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<MainPage />} /> {/* Fixed capitalization */}
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
-      <Footer /> 
+      <Footer />
     </Router>
   );
 }
