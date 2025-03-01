@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import "../../components/css/animated.css";
-import "../../components/css/fontawesome.css";
 import "../../components/css/templatemo-space-dynamic.css";
 import heroImage from '../../components/images/main.png';
 import staffTrainingImage from '../../components/images/staffTrainingImage.png';
