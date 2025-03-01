@@ -176,3 +176,32 @@ form button:hover {
 .navigationButtons button {
   min-width: 120px;
 }
+.successWindow,
+.failureWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.signupContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.signupSidebar {
+  flex: 0 0 40%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupLogo {
+  width: 150px;
+  height: 15}

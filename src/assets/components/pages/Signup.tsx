@@ -5,9 +5,21 @@ import sidebarImage from "../../components/images/signup.png";
 const Signup = () => {
   const [step, setStep] = useState(1);
   const [userType, setUserType] = useState("");
+  const [isSignupSuccess, setIsSignupSuccess] = useState(false);
+  const [isSignupFailed, setIsSignupFailed] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleBack = () => {
     setStep((prevStep) => prevStep - 1);
+  };
+
+  const handleCloseSuccess = () => {
+    setIsSignupSuccess(false);
+  };
+
+  const handleCloseFailure = () => {
+    setIsSignupFailed(false);
+    setErrorMessage("");
   };
 
   return (
@@ -16,13 +28,32 @@ const Signup = () => {
         <div className={styles.signupLogo}></div>
       </div>
       <div className={styles.signupFormContainer}>
-        <div className={styles.stepIndicator}>Step {step} of 3</div> {/* Step Indicator */}
+        <div className={styles.stepIndicator}>Step {step} of 3</div>
         {step === 1 && <SignupStep1 setStep={setStep} setUserType={setUserType} />}
         {step === 2 && (
           <SignupStep2 setStep={setStep} userType={userType} handleBack={handleBack} />
         )}
-        {step === 3 && <SignupStep3 handleBack={handleBack} />}
+        {step === 3 && (
+          <SignupStep3
+            handleBack={handleBack}
+            setIsSignupSuccess={setIsSignupSuccess}
+            setIsSignupFailed={setIsSignupFailed}
+            setErrorMessage={setErrorMessage}
+          />
+        )}
       </div>
+      {isSignupSuccess && (
+        <div className={styles.successWindow}>
+          <p>Signup successful!</p>
+          <button onClick={handleCloseSuccess}>Close</button>
+        </div>
+      )}
+      {isSignupFailed && (
+        <div className={styles.failureWindow}>
+          <p>Signup failed: {errorMessage}</p>
+          <button onClick={handleCloseFailure}>Close</button>
+        </div>
+      )}
     </div>
   );
 };
@@ -168,11 +199,43 @@ const SignupStep2: React.FC<{
   );
 };
 
-const SignupStep3: React.FC<{ handleBack: () => void }> = ({ handleBack }) => {
+const SignupStep3: React.FC<{
+  handleBack: () => void;
+  setIsSignupSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsSignupFailed: React.Dispatch<React.SetStateAction<boolean>>;
+  setErrorMessage: React.Dispatch<React.SetStateAction<string>>;
+}> = ({ handleBack, setIsSignupSuccess, setIsSignupFailed, setErrorMessage }) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const mockApiCall = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (Math.random() > 0.5) {
+            resolve("Signup successful");
+          } else {
+            reject(new Error("Signup failed: Mock error"));
+          }
+        }, 1000);
+      });
+
+      await mockApiCall;
+      setIsSignupSuccess(true);
+      setIsSignupFailed(false);
+    } catch (error) {
+      setIsSignupSuccess(false);
+      setIsSignupFailed(true);
+      if (error instanceof Error) {
+        setErrorMessage(error.toString());
+      } else {
+        setErrorMessage("An unknown error occurred.");
+      }
+    }
+  };
+
   return (
     <div className={styles.stepContainer}>
       <h2>Complete Your Profile</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Phone Number</label>
         <input type="tel" placeholder="Enter your phone number" required />
         <label>Address</label>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
-import logo from "../../components/images/PAL.png"; 
+import logo from "../../components/images/PAL.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -11,8 +11,12 @@ const Navbar: React.FC = () => {
       <div className={styles.container}>
         {/* Left section */}
         <div className={styles.leftSection}>
-          <img src={logo} alt="Logo" className={styles.navbarLogo} />
-          <span className={styles.navbarBrand}>PAL Training System</span>
+          <Link to="/">
+            <img src={logo} alt="Logo" className={styles.navbarLogo} />
+          </Link>
+          <Link to="/"> {/* Wrap the span in a Link component */}
+            <span className={styles.navbarBrand}>PAL Training System</span>
+          </Link>
         </div>
 
         {/* Center section */}

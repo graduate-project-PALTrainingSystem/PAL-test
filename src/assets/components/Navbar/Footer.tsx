@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
           </div>
           <div className="footer-right">
             <h3>Quick Link</h3>
-            <Link to="#">Contact</Link>
-            <Link to="#">About Us</Link>
-            <Link to="#">Login</Link>
-            <Link to="#">Signup</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/signup">Signup</Link>
           </div>
         </div>
         <p className="copyright">&copy; {new Date().getFullYear()} PAL Training System</p>
