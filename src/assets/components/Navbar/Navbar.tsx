@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <div className={styles.centerSection}>
           <ul className={styles.navbarNav}>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/aboutus">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>

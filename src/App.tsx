@@ -7,7 +7,7 @@ import Login from "./assets/components/pages/Login";
 import ForgotPassword from "./assets/components/pages/ForgotPassword";
 import Contact from "./assets/components/pages/Contact";
 import Signup from "./assets/components/pages/Signup"; 
-
+import AboutUs from "./assets/components/pages/AboutUs";
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footer />
     </Router>
