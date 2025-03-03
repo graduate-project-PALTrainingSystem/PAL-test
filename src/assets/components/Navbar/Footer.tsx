@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <div className="footer-right">
             <h3>Quick Link</h3>
             <Link to="/contact">Contact</Link>
-            <Link to="/about">About Us</Link>
+            <Link to="/aboutus">About Us</Link>
             <Link to="/login">Login</Link>
             <Link to="/signup">Signup</Link>
           </div>
