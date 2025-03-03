@@ -87,6 +87,7 @@ p {
 .primaryBtn {
   background-color: #10b981;
   color: white;
+  font-size: 18px;
 }
 
 .primaryBtn:hover {
@@ -97,6 +98,7 @@ p {
 .secondaryBtn {
   background-color: #e5e7eb;
   color: #374151;
+  font-size: 18px;
 }
 
 .secondaryBtn:hover {

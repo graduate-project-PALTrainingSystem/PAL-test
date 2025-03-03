@@ -7,15 +7,17 @@ import Login from "./assets/components/pages/Login";
 import ForgotPassword from "./assets/components/pages/ForgotPassword";
 import Contact from "./assets/components/pages/Contact";
 import Signup from "./assets/components/pages/Signup"; 
+import StudentProfile from "./assets/components/pages/StudentProfile";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<MainPage />} /> {/* Fixed capitalization */}
+        <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/StudentProfile" element={<StudentProfile />} /> \
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>

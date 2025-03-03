@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "../../components/css/Signup.module.css";
 import sidebarImage from "../../components/images/signup.png";
+import studentImage from "../../components/images/student.png"; // Import student image
+import companyImage from "../../components/images/company.png";
 
 const Signup = () => {
   const [step, setStep] = useState(1);
@@ -73,6 +75,11 @@ const SignupStep1: React.FC<{
           setStep(2);
         }}
       >
+        <img
+          src={studentImage}
+          alt="Student"
+          style={{ marginRight: "8px", width: "28px", height: "28px" }}
+        />
         Student
       </button>
       <button
@@ -82,6 +89,11 @@ const SignupStep1: React.FC<{
           setStep(2);
         }}
       >
+        <img
+          src={companyImage}
+          alt="Company"
+          style={{ marginRight: "8px", width: "28px", height: "28px" }}
+        />
         Company
       </button>
     </div>
